@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter \"@flyfile/*\" dev"
+    "dev": "pnpm --filter \"@flyfile/*\" --parallel dev"
   },
   "keywords": [],
   "author": "",

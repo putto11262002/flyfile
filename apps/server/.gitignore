@@ -42,6 +42,9 @@ coverage
 
 .grunt
 
+# Rollup cache
+.rollup.cache/
+
 # Bower dependency directory (https://bower.io/)
 
 bower_components
@@ -173,3 +176,10 @@ dist
 
 # Finder (MacOS) folder config
 .DS_Store
+
+# Rollup cache
+.rollup.cache
+
+
+# Ignore type definitions
+types

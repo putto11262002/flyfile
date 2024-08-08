@@ -1,0 +1,12 @@
+version: '3.6'
+  
+services:
+  postgres: 
+    image: postgres
+    container_name: flyfile_postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=flyfile
+    ports: 
+     - 5432:5432
