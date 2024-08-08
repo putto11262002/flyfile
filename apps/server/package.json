@@ -2,12 +2,20 @@
   "name": "@flyfile/server",
   "module": "src/index.ts",
   "type": "module",
+  "types": "types/bundle.d.ts",
   "scripts": {
-    "dev": "bun --hot run src/index.ts",
-    "start": "bun run src/index.ts"
+    "dev": "bun --hot run src/server.ts",
+    "start": "bun run src/server.ts",
+    "build:types": "rollup -c rollup.config.js"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/bun": "latest",
+    "esbuild": "^0.23.0",
+    "rollup": "^4.20.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "tslib": "^2.6.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

@@ -1,6 +1,3 @@
-import { Hono } from 'hono'
+import api from "./api";
 
-const app = new Hono()
-app.get('/health', (c) => c.json({status: "ok"}))
-
-export default app
+export type Api = typeof api;
