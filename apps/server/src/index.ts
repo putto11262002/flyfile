@@ -1,3 +1,3 @@
 import api from "./api";
 
-export type Api = typeof api;
+export type Api = typeof api

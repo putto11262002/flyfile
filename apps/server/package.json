@@ -2,25 +2,29 @@
   "name": "@flyfile/server",
   "module": "src/index.ts",
   "type": "module",
-  "types": "types/bundle.d.ts",
+  "types": "./types/bundle.d.ts",
   "scripts": {
     "dev": "bun --hot run src/server.ts",
     "start": "bun run src/server.ts",
-    "build:types": "rollup -c rollup.config.js"
+    "build:types": "rollup -c rollup.config.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/bun": "latest",
-    "esbuild": "^0.23.0",
+    "drizzle-kit": "^0.23.2",
     "rollup": "^4.20.0",
     "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-esbuild": "^6.1.1",
     "tslib": "^2.6.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "hono": "^4.5.4"
+    "drizzle-orm": "^0.32.2",
+    "hono": "^4.5.4",
+    "postgres": "^3.4.4"
   }
 }

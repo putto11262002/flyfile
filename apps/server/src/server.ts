@@ -1,18 +1,10 @@
-import { Hono } from "hono";
-import api from "./api";
-import { cors } from "hono/cors";
+import { Hono } from 'hono'
+import api from './api'
+import { cors } from 'hono/cors'
 
-const app = new Hono();
 
-app.use(
-  cors({
-    origin: process.env.CORS_ORIGINS?.split(",") || "*",
-  }),
-);
-app.route("", api);
+const app = new Hono()
+app.use(cors({origin: process.env.CORS_ORIGIN?.split(",") ||  "*"}))
+app.route("", api)
 
-export default {
-  fetch: app.fetch,
-  app,
-  port: process.env.PORT || 3002,
-};
+export default app
