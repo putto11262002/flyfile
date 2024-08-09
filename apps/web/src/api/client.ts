@@ -5,4 +5,3 @@ import {Api} from "@flyfile/server"
 const client = hc<Api>("http://localhost:3000")
 
 export default client
-
